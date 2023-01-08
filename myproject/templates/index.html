@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    
+    <div class="container ">
+
+        <div class="text-center shadow m-3 p-3 fts-italic bg-info rounded text-light">
+            <h3 class="fw-bolder text-decoration-underline">INDEX PAGE</h3>
+        </div>
+
+        <div class="container shadow rounded p-4">
+
+            <form method="post" action="{% url 'index' %}">
+                {% csrf_token %}
+                
+                <div class="mb-3">
+                    <label for="fname" class="form-label" >First Name :</label>
+                    <input type="text" name="fname" class="form-control" id="fname">
+                </div>
+
+                <div class="mb-3">
+                    <label for="lname" class="form-label" >Last Name :</label>
+                    <input type="text" name="lname" class="form-control" id="lname">
+                </div>
+
+                <div class="mb-3">
+                    <label for="qualification" class="form-label" >Qualification :</label>
+                    <select name="qualification" id="qualification">
+                        <option value=""> select</option>
+                        <option value="SSC"> SSC 10th</option>
+                        <option value="HSC"> HSC 12th</option>
+                        <option value="Diploma"> Diploma</option>
+                        <option value="Degree"> Degree</option>
+                        <option value="Graduation"> Graduation </option>
+                        <option value="Post-Graduation"> Post-Graduation</option>
+
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Contact :</label>
+                    <input type="text" name="contact" class="form-control" id="contact">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label" >Email :</label>
+                    <input type="email" name="email" class="form-control" id="email">
+                </div>
+
+                <div class="mb-3">
+                    <label for="address" class="form-label">Address :</label>
+                    <textarea class="form-control" name="address" id="address" cols="80" rows="5"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% extends 'Nimap_temp/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Contact Us Page</title>
+{% endblock title %}
+
+{% block body %}
+
+{% if messages %}
+
+    {% for msg in messages %}
+        <p {% if msg.tags %} class="p-3 alert-{{msg.tags}}"{% endif %}>{{msg}}</p>
+    {% endfor %}
+
+{% endif %}
+
+<div>
+    
+    <div class="container text-center border mt-3 shadow">
+        <h1 class="text-primary">Contact Us</h1>
+    </div>
+
+    <div class="container text-center border mt-3 shadow mb-3 p-4">
+
+        <h1 class=""> This Is Demo Contact Us Page</h1>
+
+    </div>
+
+</div>
+
+{% endblock body %}

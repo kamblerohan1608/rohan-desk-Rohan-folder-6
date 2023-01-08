@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress page</title>
+    <style>
+        .progress{
+            width:210px;
+            height:30px;
+            border: 2px solid black;
+            background-color: gray;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress_fill{
+            
+            width: 50%;
+            height: 100%;
+            background-color: green;
+        }
+        .progress_text{
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>This is Progress bar example</h1>
+    </div>
+    <div class="progress">
+        <div class="progress_fill" ></div>
+        <div class="progress_text">25%</div>
+    </div>
+</body>
+</html>
